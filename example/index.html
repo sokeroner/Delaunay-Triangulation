@@ -1,0 +1,48 @@
+<!DOCTYPE HTML> 
+<html lang="en"> 
+	<head> 
+		<title>Delaunay - Triangulation.</title> 
+		<meta charset="utf-8"> 
+		<style type="text/css"> 
+		    body {
+				color: #000;
+				font-family:Monospace;
+				font-size:13px;
+				text-align:center;
+				font-weight: bold;
+	 
+				background-color: #fff;
+				margin: 0px;
+				overflow: hidden;
+		    }
+ 			
+		</style> 
+		<style type="text/css">
+      #myCanvas {
+        height: 100%; width: 100%; border: 1px solid black;
+      }
+    </style>
+	</head> 
+ 
+	<body > 
+		<script type='text/javascript' src='../src/Delaunay.js'></script>
+		
+		<script type='text/javascript' src='../src/core/Edge.js'></script>
+		<script type='text/javascript' src='../src/core/Incircle.js'></script>
+		<script type='text/javascript' src='../src/core/Triangulate.js'></script>
+		
+		<script type='text/javascript' src='../src/geometries/Point.js'></script>
+		<script type='text/javascript' src='../src/geometries/Triangle.js'></script>
+		
+		<script type='text/javascript' src='../src/debug/Debug.js'></script>
+		
+		
+		<script text='text/javascript'>
+			
+			var point = new Delaunay.Triangle( new Delaunay.Point( 30, 40 ), new Delaunay.Point( 10, 10 ), new Delaunay.Point( 20, 50 ) );
+			DEBUG.trace ( point.getCenter() );
+			//DEBUG.trace ( point.equals2d ( new Delaunay.Point( 30, 40 ) ) );
+			
+		</script>
+	</body>
+	</html>
