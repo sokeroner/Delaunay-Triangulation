@@ -45,7 +45,7 @@
 			function start ( )
 			{
 				
-				document.addEventListener('mousedown',doSomething,false);
+				document.addEventListener('mousedown',onclickpoint,false);
 			}
 			
 			
@@ -64,7 +64,7 @@
 			}
 			
 			
-			function doSomething(event) {
+			function onclickpoint (event) {
 				vertices.push( new Delaunay.Point(event.clientX, event.clientY));
 				render(vertices);
 				
