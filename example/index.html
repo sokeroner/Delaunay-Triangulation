@@ -39,10 +39,84 @@
 		
 		<script text='text/javascript'>
 			
-			var point = new Delaunay.Triangle( new Delaunay.Point( 30, 40 ), new Delaunay.Point( 10, 10 ), new Delaunay.Point( 20, 50 ) );
-			DEBUG.trace ( point.getCenter() );
-			//DEBUG.trace ( point.equals2d ( new Delaunay.Point( 30, 40 ) ) );
+			var DEBUG = true;
+
+			var gui;
+			var param = { nbMessage:15, search:"japan", fct:addPoints };
+			
+			var vertices = [];
+			
+			start();
+			
+			function start ( )
+			{
+				
+				document.addEventListener('mousedown',doSomething,false);
+			}
+			
+			
+			function addPoints ( )
+			{
+				
+				vertices = [];
+				
+				for( var i = 0; i < param.nbMessage; i++ )
+				{
+					vertices.push( newPoint() );
+				}
+				console.log ( Delaunay.Triangulate(vertices) );
+				render(vertices);
+				
+			}
+			
+			
+			function doSomething(event) {
+				vertices.push( new Delaunay.Point(event.clientX, event.clientY));
+				render(vertices);
+				
+			}
+			
+			
+			
+			function newPoint ( )
+			{
+				return new Delaunay.Point( Math.random() * window.innerWidth, Math.random() * window.innerHeight );
+			}
+			
+			
+			
+			function render ( vertices )
+			{
+				
+				var delaunay = Delaunay.Triangulate( vertices );
+				
+				var ctx = document.getElementById('canvas').getContext('2d');
+				document.getElementById('canvas').setAttribute('width', window.innerWidth);
+				document.getElementById('canvas').setAttribute('height', window.innerHeight);
+				ctx.strokeStyle = "red";
+				
+				var t;
+				var i;
+				var L = delaunay.length;
+				
+				
+			  for ( i = 0; i < L; i++ )
+				{
+					t = delaunay[ i ];
+					ctx.beginPath();
+					ctx.moveTo(t.p1.x, t.p1.y);
+					ctx.lineTo(t.p2.x, t.p2.y);
+					ctx.lineTo(t.p3.x, t.p3.y);
+					ctx.lineTo(t.p1.x, t.p1.y);
+					ctx.stroke();
+				}
+
+				
+			}
 			
 		</script>
+		
+		<canvas id="canvas" id="myCanvas"></canvas> 
+		
 	</body>
 	</html>

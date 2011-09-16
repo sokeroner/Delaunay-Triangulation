@@ -117,8 +117,7 @@ Delaunay.Triangulate = function ( vertices )
 			if (triangles.length >= trimax )
 			{
 				//	throw new ApplicationException("Exceeded maximum edges");
-				console.warn("Exceeded maximum edges");
-				
+				DEBUG.warning ("Exceeded maximum edges");				
 			}
 			triangles.push( new Delaunay.Triangle( Edges[ j ].p1, Edges[ j ].p2, vertices[ i ] ));
 
@@ -132,20 +131,15 @@ Delaunay.Triangulate = function ( vertices )
 	// Remove triangles with supertriangle vertices
 	// These are triangles which have a vertex number greater than nv
 	
-	console.log ( triangles.length)
 
 	for ( i = triangles.length - 1; i >= 0; i--)
-	{
-		console.log ( triangles[ i ].id );
-		
+	{	
 		if ( triangles[ i ].p1.id >= nv || triangles[ i ].p2.id >= nv || triangles[ i ].p3.id >= nv)
 		{
 			triangles.splice(i, 1);
 			
 		}
 	}
-console.log ( triangles.length)
-console.log ( nv );
 
 
 	//Remove SuperTriangle vertices
