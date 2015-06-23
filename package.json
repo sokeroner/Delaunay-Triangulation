@@ -1,0 +1,49 @@
+{
+  "name": "delaunay-triangulation",
+  "version": "2.0.0",
+  "description": "Simple javascript module for triangulation.",
+  "main": "src/index.js",
+  "bin": "bin/delaunay.js",
+  "scripts": {
+    "test": "tape test/index.js",
+    "bundle": "browserify src/index.js --standalone Delaunay -o bin/delaunay.js",
+    "uglify": "uglifyjs bin/delaunay.js -m > bin/delaunay.min.js",
+    "build": "npm run bundle && npm run uglify && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sokeroner/Delaunay-Triangulation.git"
+  },
+  "keywords": [
+    "delaunay",
+    "triangulation",
+    "triangulate",
+    "triangle",
+    "browserify"
+  ],
+  "author": "Jean-Vincent Roger <jv.roger@84paris.com> (http://www.84paris.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sokeroner/Delaunay-Triangulation/issues"
+  },
+  "homepage": "https://github.com/sokeroner/Delaunay-Triangulation",
+  "devDependencies": {
+    "tape": "^4.0.0",
+    "uglifyjs": "^2.4.10"
+  },
+  "testling": {
+    "files": "test/index.js",
+    "browsers": [
+      "ie/8..latest",
+      "firefox/15..latest",
+      "chrome/18..latest",
+      "chrome/canary",
+      "opera/10..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
+  }
+}
