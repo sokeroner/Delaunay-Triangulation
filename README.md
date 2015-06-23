@@ -54,3 +54,6 @@ for ( var i = 0; i < L; i++ ) {
 ### License ###
 
 This content is released under the [MIT License](http://opensource.org/licenses/MIT).
+
+
+[![Analytics](https://ga-beacon.appspot.com/UA-64424781-1/Delaunay-Triangulation/index)](https://github.com/igrigorik/ga-beacon)
