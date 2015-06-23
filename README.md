@@ -52,7 +52,7 @@ for ( var i = 0; i < L; i++ ) {
 
 ### npm package ###
 
-[![NPM](https://nodei.co/npm/delaunay-triangulation.png)](https://www.npmjs.com/package/delaunay-triangulation)
+[![NPM](https://nodei.co/npm/delaunay-triangulation.png?compact=true)](https://www.npmjs.com/package/delaunay-triangulation)
 
 
 ### License ###
