@@ -48,7 +48,7 @@ for ( var i = 0; i < L; i++ ) {
 
 ### Test ###
 
-[![testling badge](https://ci.testling.com/sokeroner/Delaunay-Triangulation.png)](https://ci.testling.com/sokeroner/Delaunay-Triangulation.png)
+[![testling badge](https://ci.testling.com/sokeroner/Delaunay-Triangulation.png)](https://ci.testling.com/sokeroner/Delaunay-Triangulation)
 
 
 ### License ###
