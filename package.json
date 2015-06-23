@@ -1,0 +1,22 @@
+{
+  "name": "delaunay-triangulation-demo",
+  "version": "1.0.0",
+  "description": "delaunay-triangulation demonstration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sokeroner/Delaunay-Triangulation.git"
+  },
+  "author": "Jean-Vincent Roger <jv.roger@84paris.com> (www.84paris.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sokeroner/Delaunay-Triangulation/issues"
+  },
+  "homepage": "https://github.com/sokeroner/Delaunay-Triangulation",
+  "dependencies": {
+    "delaunay-triangulation": "^2.0.0"
+  }
+}
