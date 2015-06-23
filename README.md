@@ -50,6 +50,10 @@ for ( var i = 0; i < L; i++ ) {
 
 [![testling badge](https://ci.testling.com/sokeroner/Delaunay-Triangulation.png)](https://ci.testling.com/sokeroner/Delaunay-Triangulation)
 
+### npm package ###
+
+[![NPM](https://nodei.co/npm/delaunay-triangulation.png)](https://www.npmjs.com/package/delaunay-triangulation)
+
 
 ### License ###
 
